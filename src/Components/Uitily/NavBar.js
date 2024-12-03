@@ -1,35 +1,47 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const NavBar = () => {
-
+const NavBar = ({ link1, link2, link3, link4 }) => {
   return (
     <div>
-      <header className='containerPage'>
-        <ul className='topnav' id='myTopnav'>
-            <li><a href='/' className="logo"><span><span className="line"></span><span className="word1">Auto</span><span className="line"></span></span><span className="word">Dealz</span></a></li>
-            <Link to="/" style={{ textDecoration: "none" }}>
-            <li className="active nav">Home</li>
-            </Link>
-            <Link to="/aboutus" style={{ textDecoration: "none" }}>
-              <li className="nav">About</li>
-            </Link>
-            <Link to="/services" style={{ textDecoration: "none" }}>
-              <li className="nav">Service</li>
-            </Link>
-            <Link to="/contactus" style={{ textDecoration: "none" }}>
-              <li className="nav">Contact</li>
-            </Link>
-            <Link to="/search" style={{ textDecoration: "none" }}>
-              <li><i class="fas fa-search"></i></li>
-            </Link>
-            <Link to="/login" style={{ textDecoration: "none" }}>
-              <li><i class="fas fa-sign-in-alt"></i></li>
-            </Link>
+      <header className="containerPage">
+        <ul className="topnav" id="myTopnav">
+          <li>
+            <a href="/" className="logo">
+              <span>
+                <span className="line"></span>
+                <span className="word1">Auto</span>
+                <span className="line"></span>
+              </span>
+              <span className="word">Dealz</span>
+            </a>
+          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li className="active nav">{link1}</li>
+          </Link>
+          <Link to="/aboutus" style={{ textDecoration: "none" }}>
+            <li className="nav">{link2}</li>
+          </Link>
+          <Link to="/services" style={{ textDecoration: "none" }}>
+            <li className="nav">{link3}</li>
+          </Link>
+          <Link to="/contactus" style={{ textDecoration: "none" }}>
+            <li className="nav">{link4}</li>
+          </Link>
+          <Link to="/search" style={{ textDecoration: "none" }}>
+            <li>
+              <i class="fas fa-search"></i>
+            </li>
+          </Link>
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            <li>
+              <i class="fas fa-sign-in-alt"></i>
+            </li>
+          </Link>
         </ul>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

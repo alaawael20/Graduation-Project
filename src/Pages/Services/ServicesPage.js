@@ -1,10 +1,10 @@
-import React from 'react';
-import NavBar from '../../Components/Uitily/NavBar';
-import { Col, Container, Row } from 'react-bootstrap';
-import ServiceCard from './../../Components/Services/ServiceCard';
-import Pagination from '../../Components/Uitily/Pagination';
-import Footer from '../../Components/Uitily/Footer';
-import { ServicesData } from '../../mock/ServicesData';
+import React from "react";
+import NavBar from "../../Components/Uitily/NavBar";
+import { Col, Container, Row } from "react-bootstrap";
+import ServiceCard from "./../../Components/Services/ServiceCard";
+import Pagination from "../../Components/Uitily/Pagination";
+import Footer from "../../Components/Uitily/Footer";
+import { ServicesData } from "../../mock/ServicesData";
 
 const ServicesPage = () => {
   const itemsPerRow = 4;
@@ -16,14 +16,17 @@ const ServicesPage = () => {
 
   return (
     <div>
-      <NavBar />
-      <div className='titlePage'>Services</div>
+      <NavBar link1="Home" link2="About" link3="Services" link4="Contact Us" />
+      <div className="titlePage">Services</div>
       <Container>
         {rows.map((row, rowIndex) => (
-          <Row className='mt-4' key={rowIndex}>
-            {row.map(service => (
-              <Col md={3} className='d-flex justify-content-center align-items-center mb-3'>
-                <ServiceCard 
+          <Row className="mt-4" key={rowIndex}>
+            {row.map((service) => (
+              <Col
+                md={3}
+                className="d-flex justify-content-center align-items-center mb-3"
+              >
+                <ServiceCard
                   key={service.id}
                   title={service.title}
                   details={service.details}
@@ -37,6 +40,6 @@ const ServicesPage = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default ServicesPage;
