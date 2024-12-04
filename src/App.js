@@ -11,6 +11,7 @@ import Search from "./Pages/Search/Search";
 import Details from "./Pages/Details/Details";
 import BookNow from "./Pages/BookNow/BookNow";
 import SallerProfile from "./Pages/Seller/SallerProfile/SallerProfile";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/recentlyAdded/detailcar" element={<Details />} />
         <Route path="/recentlyAdded/detailcar/booknow" element={<BookNow />} />
         <Route path="/saller/sallerProfile" element={<SallerProfile />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
