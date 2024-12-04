@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact/Contact";
 import Search from "./Pages/Search/Search";
 import Details from "./Pages/Details/Details";
 import BookNow from "./Pages/BookNow/BookNow";
+import SallerProfile from "./Pages/Seller/SallerProfile/SallerProfile";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/brands" element={<BrandsPage />} />
         <Route path="/recentlyAdded/detailcar" element={<Details />} />
         <Route path="/recentlyAdded/detailcar/booknow" element={<BookNow />} />
+        <Route path="/saller/sallerProfile" element={<SallerProfile />} />
       </Routes>
     </BrowserRouter>
   );

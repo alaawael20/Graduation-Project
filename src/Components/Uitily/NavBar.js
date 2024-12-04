@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ link1, link2, link3, link4 }) => {
+const NavBar = ({ link1, link2, link3, link4, to1, to2, to3, to4 }) => {
   return (
     <div>
       <header className="containerPage">
@@ -16,16 +16,16 @@ const NavBar = ({ link1, link2, link3, link4 }) => {
               <span className="word">Dealz</span>
             </a>
           </li>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to={to1} style={{ textDecoration: "none" }}>
             <li className="active nav">{link1}</li>
           </Link>
-          <Link to="/aboutus" style={{ textDecoration: "none" }}>
+          <Link to={to2} style={{ textDecoration: "none" }}>
             <li className="nav">{link2}</li>
           </Link>
-          <Link to="/services" style={{ textDecoration: "none" }}>
+          <Link to={to3} style={{ textDecoration: "none" }}>
             <li className="nav">{link3}</li>
           </Link>
-          <Link to="/contactus" style={{ textDecoration: "none" }}>
+          <Link to={to4} style={{ textDecoration: "none" }}>
             <li className="nav">{link4}</li>
           </Link>
           <Link to="/search" style={{ textDecoration: "none" }}>

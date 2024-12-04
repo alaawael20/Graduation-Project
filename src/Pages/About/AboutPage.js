@@ -6,7 +6,16 @@ import car9 from "../../Images/car9.jpg";
 const AboutPage = () => {
   return (
     <div>
-      <NavBar link1="Home" link2="About" link3="Services" link4="Contact Us" />
+      <NavBar
+        link1="Home"
+        link2="About"
+        link3="Services"
+        link4="Contact Us"
+        to1="/"
+        to2="/aboutus"
+        to3="/services"
+        to4="/contactus"
+      />
       <div className="titlePage">About Us</div>
       <div className="containerPage aboutContent my-4">
         <div>
