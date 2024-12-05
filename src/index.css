@@ -304,23 +304,27 @@ section {
   color: black;
   margin-left: 15px;
 }
-.card .detailsBtn {
+.card .btnStyled {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.card .detailsBtn {
   margin-bottom: 10px;
   margin-right: 10px;
 }
 .card .detailsBtn button {
   padding: 5px 15px;
-  color: red;
+  color: #0a2463;
   background-color: white;
-  border: 1px solid red;
+  border: 1px solid #0a2463;
   font-weight: 600;
   cursor: pointer;
 }
 .card .detailsBtn button:hover {
   color: white;
-  background-color: red;
+  background-color: #0a2463;
 }
 @media (max-width: 1115px) {
   .cards {

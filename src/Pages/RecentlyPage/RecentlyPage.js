@@ -30,6 +30,9 @@ const RecentlyPage = () => {
             power={card.power}
             trans={card.trans}
             img={card.img}
+            detailesBtn="Details"
+            display2="none"
+            display3="none"
           />
         ))}
       </div>

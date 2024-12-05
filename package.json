@@ -12,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "formik": "^2.4.6",
     "gh-pages": "^5.0.0",
     "mdb-react-ui-kit": "^9.0.0",
     "react": "^18.2.0",
@@ -21,8 +22,10 @@
     "react-popper": "^2.3.0",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.6",
     "styled-components": "^6.1.13",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.5.0"
   },
   "scripts": {
     "predeploy": "npm run build",

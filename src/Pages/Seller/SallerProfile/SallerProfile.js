@@ -12,8 +12,8 @@ const SallerProfile = () => {
         link2="Car management"
         link3="Incoming requests"
         link4="Messages"
-        to1="my-profile"
-        to2="/car-management"
+        to1="/saller/sallerProfile"
+        to2="/saller/CarManagement"
         to3="/incoming-requests"
         to4="/messages"
       />
