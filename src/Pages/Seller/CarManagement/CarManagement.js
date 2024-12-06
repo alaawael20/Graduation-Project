@@ -12,28 +12,44 @@ import Pagination from "../../../Components/Uitily/Pagination";
 
 const CarManagement = () => {
   const initialValues = {
-    brand: "",
-    model: "",
+    carName: "",
     price: "",
-    condition: "",
+    fuel: "",
+    engine: "",
+    power: "",
+    transmission: "",
     images: null,
     description: "",
   };
 
   const validationSchema = Yup.object({
-    brand: Yup.string().required("Please Enter a brand"),
-    model: Yup.string().required("Please Enter a model"),
+    carName: Yup.string().required("Please Enter the car name"),
     price: Yup.number()
       .required("Please Enter a price")
       .positive("The price should be positive"),
-    condition: Yup.string().required("Please Enter a condition"),
-    images: Yup.mixed().required("Please Enter the picture"),
-    description: Yup.string().max(500, "الوصف يجب أن لا يتجاوز 500 حرف"),
+    fuel: Yup.string().required("Please Select a fuel type"),
+    engine: Yup.string().required("Please Select an engine type"),
+    power: Yup.string().required("Please Select the power"),
+    transmission: Yup.string().required("Please Select the transmission type"),
+    images: Yup.mixed()
+      .required("Please upload a picture")
+      .test("fileType", "Unsupported file format", (value) =>
+        Array.from(value || []).every((file) =>
+          ["image/jpeg", "image/png"].includes(file.type)
+        )
+      )
+      .test("fileSize", "File size is too large", (value) =>
+        Array.from(value || []).every((file) => file.size <= 1048576)
+      ),
+    description: Yup.string().max(
+      500,
+      "Description must not exceed 500 characters"
+    ),
   });
 
   const handleSubmit = (values, { resetForm }) => {
-    console.log("تم إرسال البيانات:", values);
-    toast.success("🚗 The car has been saved successfully!", {
+    console.log("Send Data Is Done:", values);
+    toast.success("🚗 The car has been added successfully!", {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -52,11 +68,10 @@ const CarManagement = () => {
         link2="Car management"
         link3="Incoming requests"
         link4="Messages"
-        to1="/saller/sallerProfile"
-        to2="/saller/CarManagement"
-        to3="/incoming-requests"
-        to4="/messages"
-        className="navbar"
+        to1="/Seller/SellerProfile"
+        to2="/Seller/CarManagement"
+        to3="/Seller/IncomingRequests"
+        to4="/Seller/Messages"
       />
       <div className="form-container">
         <h1 className="form-title">Add a new car</h1>
@@ -68,30 +83,15 @@ const CarManagement = () => {
           {({ setFieldValue }) => (
             <Form>
               <div className="form-group">
-                <label>The Brand</label>
+                <label>Car Name</label>
                 <Field
                   type="text"
-                  name="brand"
-                  placeholder="Ex: Toyota"
+                  name="carName"
+                  placeholder="Ex: KIA"
                   className="form-input"
                 />
                 <ErrorMessage
-                  name="brand"
-                  component="div"
-                  className="error-message"
-                />
-              </div>
-
-              <div className="form-group">
-                <label>The Model</label>
-                <Field
-                  type="text"
-                  name="model"
-                  placeholder="Ex: Corolla"
-                  className="form-input"
-                />
-                <ErrorMessage
-                  name="model"
+                  name="carName"
                   component="div"
                   className="error-message"
                 />
@@ -113,14 +113,68 @@ const CarManagement = () => {
               </div>
 
               <div className="form-group">
-                <label>State</label>
-                <Field as="select" name="condition" className="form-input">
-                  <option value="">Select the State</option>
-                  <option value="new">New</option>
-                  <option value="used">Old</option>
+                <label>Fuel</label>
+                <Field as="select" name="fuel" className="form-input">
+                  <option value="">Select the Fuel Type</option>
+                  <option value="petrol">Petrol</option>
+                  <option value="diesel">Diesel</option>
+                  <option value="hybrid">Hybrid</option>
+                  <option value="electric">Electric</option>
+                  <option value="cng">CNG</option>
                 </Field>
                 <ErrorMessage
-                  name="condition"
+                  name="fuel"
+                  component="div"
+                  className="error-message"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Engine</label>
+                <Field as="select" name="engine" className="form-input">
+                  <option value="">Select the Engine Type</option>
+                  <option value="v4">V4</option>
+                  <option value="v6">V6</option>
+                  <option value="v8">V8</option>
+                  <option value="v12">V12</option>
+                  <option value="electric">Electric Motor</option>
+                </Field>
+                <ErrorMessage
+                  name="engine"
+                  component="div"
+                  className="error-message"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Power</label>
+                <Field as="select" name="power" className="form-input">
+                  <option value="">Select the Power</option>
+                  <option value="100hp">100 HP</option>
+                  <option value="150hp">150 HP</option>
+                  <option value="200hp">200 HP</option>
+                  <option value="300hp">300 HP</option>
+                  <option value="400hp">400+ HP</option>
+                </Field>
+                <ErrorMessage
+                  name="power"
+                  component="div"
+                  className="error-message"
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Transmission</label>
+                <Field as="select" name="transmission" className="form-input">
+                  <option value="">Select the Transmission Type</option>
+                  <option value="manual">Manual</option>
+                  <option value="automatic">Automatic</option>
+                  <option value="cvt">CVT</option>
+                  <option value="dual-clutch">Dual-Clutch</option>
+                  <option value="electric">Electric</option>
+                </Field>
+                <ErrorMessage
+                  name="transmission"
                   component="div"
                   className="error-message"
                 />
@@ -145,7 +199,7 @@ const CarManagement = () => {
               </div>
 
               <div className="form-group">
-                <label>Discription (Option)</label>
+                <label>Description (Optional)</label>
                 <Field
                   as="textarea"
                   name="description"
@@ -167,6 +221,7 @@ const CarManagement = () => {
         </Formik>
         <ToastContainer />
       </div>
+
       <div className="titlePage">Added Cars</div>
       <div className="containerPage cards my-5">
         {RecentAddCardData.map((card) => (

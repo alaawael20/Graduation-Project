@@ -10,9 +10,11 @@ import Contact from "./Pages/Contact/Contact";
 import Search from "./Pages/Search/Search";
 import Details from "./Pages/Details/Details";
 import BookNow from "./Pages/BookNow/BookNow";
-import SallerProfile from "./Pages/Seller/SallerProfile/SallerProfile";
-import NotFound from "./Pages/NotFound/NotFound";
 import CarManagement from "./Pages/Seller/CarManagement/CarManagement";
+import IncomingRequests from "./Pages/Seller/IncomingRequests/IncomingRequests";
+import Messages from "./Pages/Seller/Messages/Messages";
+import NotFound from "./Pages/NotFound/NotFound";
+import SellerProfile from "./Pages/Seller/SellerProfile/SellerProfile";
 
 function App() {
   return (
@@ -29,8 +31,10 @@ function App() {
         <Route path="/brands" element={<BrandsPage />} />
         <Route path="/recentlyAdded/detailcar" element={<Details />} />
         <Route path="/recentlyAdded/detailcar/booknow" element={<BookNow />} />
-        <Route path="/saller/sallerProfile" element={<SallerProfile />} />
-        <Route path="/saller/CarManagement" element={<CarManagement />} />
+        <Route path="/Seller/SellerProfile" element={<SellerProfile />} />
+        <Route path="/Seller/CarManagement" element={<CarManagement />} />
+        <Route path="/Seller/IncomingRequests" element={<IncomingRequests />} />
+        <Route path="/Seller/Messages" element={<Messages />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
