@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../../Components/Uitily/NavBar";
 import Footer from "../../Components/Uitily/Footer";
 import car9 from "../../Images/car9.jpg";
+import "./AboutPage.css";
 
 const AboutPage = () => {
   return (
@@ -16,17 +17,17 @@ const AboutPage = () => {
         to3="/services"
         to4="/contactus"
       />
-      <div className="titlePage">About Us</div>
-      <div className="containerPage aboutContent my-4">
-        <div>
-          <p className="p1">
+      <div className="about-title">About Us</div>
+      <div className="about-container">
+        <div className="about-content">
+          <p className="about-text">
             At Auto Dealz Car, we're passionate about cars and dedicated to
             providing our customers with the highest-quality products and
             services. Since 1995, we've been serving car enthusiasts and
             mechanics alike with a wide range of products, including OEM and
             aftermarket parts, accessories, and tools.
           </p>
-          <p className="p2">
+          <p className="about-text">
             Our mission is simple: to help our customers get the most out of
             their vehicles by providing reliable, top-quality parts at
             competitive prices. Whether you're looking to upgrade your car's
@@ -42,14 +43,14 @@ const AboutPage = () => {
             specific vehicle.
           </p>
         </div>
-        <div className="aboutImg">
-          <img src={car9} alt="car" />
-          <p className="p2">
+        <div className="about-image-container">
+          <img src={car9} alt="car" className="about-image" />
+          <p className="about-text">
             We're also proud to be active members of our community. We sponsor
             local car shows and events, and we're committed to reducing our
             environmental impact through responsible business practices.
           </p>
-          <p className="p2">
+          <p className="about-text">
             If you're looking for a reliable, customer-focused car and spare
             parts store, look no further than Auto Dealz Car. Contact us today
             to learn more about our products and services.

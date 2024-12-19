@@ -7,7 +7,6 @@ const LoginPage = () => {
   return (
     <Container className="my-5">
       <Row className="shadow-lg p-4 rounded align-items-center">
-        {/* Form Section */}
         <Col xl="6" lg="6" sm="12" className="mt-3 pt-3">
           <div className="titlePage text-center mb-4 fs-2 fw-bold text-primary">
             Sign In
@@ -31,15 +30,17 @@ const LoginPage = () => {
                 className="rounded-3"
               />
             </Form.Group>
-            <Form.Group className="mb-4 d-flex justify-content-center">
-              <Button
-                variant="primary"
-                size="lg"
-                className="px-5 py-2 rounded-3"
-              >
-                Submit
-              </Button>
-            </Form.Group>
+            <Link to="/">
+              <Form.Group className="mb-4 d-flex justify-content-center">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="px-5 py-2 rounded-3"
+                >
+                  Log In
+                </Button>
+              </Form.Group>
+            </Link>
             <Link
               to="/register"
               style={{ textDecoration: "none", color: "black" }}
@@ -52,7 +53,6 @@ const LoginPage = () => {
             </Link>
           </Form>
         </Col>
-        {/* Image Section */}
         <Col
           xl="6"
           lg="6"

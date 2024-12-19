@@ -13,8 +13,8 @@ import BookNow from "./Pages/BookNow/BookNow";
 import CarManagement from "./Pages/Seller/CarManagement/CarManagement";
 import IncomingRequests from "./Pages/Seller/IncomingRequests/IncomingRequests";
 import Messages from "./Pages/Seller/Messages/Messages";
-import NotFound from "./Pages/NotFound/NotFound";
 import SellerProfile from "./Pages/Seller/SellerProfile/SellerProfile";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (

@@ -3,6 +3,7 @@ import NavBar from "../../Components/Uitily/NavBar";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import forContact from "../../Images/forContact.jpg";
 import Footer from "../../Components/Uitily/Footer";
+import "./ContactPage.css";
 
 const Contact = () => {
   return (
@@ -17,22 +18,16 @@ const Contact = () => {
         to3="/services"
         to4="/contactus"
       />
-      <div className="titlePage">Talk To Us</div>
-      <div className="container my-3">
+      <div className="contact-title">Talk To Us</div>
+      <div className="contact-container my-3">
         <Row>
-          <Col xl="6" lg="6" sm="12" className="contactSide">
+          <Col xl="6" lg="6" sm="12" className="contact-side">
             <Form>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
+              <Form.Group className="mb-3" controlId="formName">
                 <Form.Label>Your Name</Form.Label>
                 <Form.Control type="text" size="md" placeholder="Name" />
               </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
+              <Form.Group className="mb-3" controlId="formEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
                   type="email"
@@ -40,10 +35,7 @@ const Contact = () => {
                   placeholder="name@example.com"
                 />
               </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
+              <Form.Group className="mb-3" controlId="formMessage">
                 <Form.Label>What would you like to discuss?</Form.Label>
                 <Form.Control
                   as="textarea"
@@ -54,14 +46,14 @@ const Contact = () => {
               </Form.Group>
               <Form.Group
                 className="mb-3 d-flex justify-content-center"
-                controlId="exampleForm.ControlTextarea1"
+                controlId="formSubmit"
               >
                 <Button variant="primary">Submit</Button>
               </Form.Group>
             </Form>
           </Col>
-          <Col xl="6" lg="6" sm="12" className="contactSide">
-            <img src={forContact} alt="ContactPic" className="contactImg" />
+          <Col xl="6" lg="6" sm="12" className="contact-side">
+            <img src={forContact} alt="ContactPic" className="contact-img" />
           </Col>
         </Row>
       </div>

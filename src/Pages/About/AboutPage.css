@@ -1,0 +1,85 @@
+.about-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 30px;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .about-content {
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .about-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .about-image-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .about-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .about-image-container .about-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 10px;
+    }
+  
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    .about-content {
+      font-size: 1rem;
+    }
+  
+    .about-image {
+      max-height: 300px;
+    }
+  }
+  
+  /* Navbar and Footer custom styles (if needed) */
+  .navbar, .footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+  }
+  
+  .navbar a, .footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover, .footer a:hover {
+    color: #0056b3;
+  }
+  

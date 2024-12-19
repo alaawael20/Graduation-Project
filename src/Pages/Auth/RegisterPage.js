@@ -18,13 +18,11 @@ const RegisterPage = () => {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
-  // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Validation
   const validateForm = () => {
     const newErrors = {};
     if (!formData.username.trim()) newErrors.username = "Username is required.";
@@ -44,7 +42,6 @@ const RegisterPage = () => {
     return newErrors;
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
@@ -54,7 +51,6 @@ const RegisterPage = () => {
       setErrors({});
       setSubmitted(true);
 
-      // Clear form fields
       setFormData({
         username: "",
         email: "",
@@ -71,7 +67,6 @@ const RegisterPage = () => {
   return (
     <Container className="my-5">
       <Row className="shadow-lg p-4 rounded">
-        {/* Form Section */}
         <Col xl="6" lg="6" sm="12" className="mt-3 pt-3">
           <div className="titlePage text-center mb-4 fs-2 fw-bold text-primary">
             Sign Up
@@ -216,8 +211,6 @@ const RegisterPage = () => {
             </span>
           </Link>
         </Col>
-
-        {/* Image Section */}
         <Col
           xl="6"
           lg="6"

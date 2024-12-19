@@ -1,12 +1,10 @@
-import React from 'react'
-import { Button, Col, Form, Row } from 'react-bootstrap'
+import React from "react";
+import { Button, Col, Form, Row } from "react-bootstrap";
 
 const Filter = () => {
   return (
-    <Form className='container my-5'>
-
+    <Form className="container my-5">
       <Row className="mb-3" lg="4" md="3" sm="2" xs="1">
-
         <Form.Group as={Col} controlId="formGridState">
           <Form.Label>Make</Form.Label>
           <Form.Select defaultValue="Choose...">
@@ -120,11 +118,9 @@ const Filter = () => {
             <option>5000$</option>
           </Form.Select>
         </Form.Group>
-
       </Row>
 
       <Row className="mb-3" lg="3" md="2" xs="1">
-
         <Form.Group as={Col} controlId="formGridState">
           <Form.Label>Body types</Form.Label>
           <Form.Select defaultValue="Choose...">
@@ -162,14 +158,13 @@ const Filter = () => {
             <option>5+ suitcase (600 liters)</option>
           </Form.Select>
         </Form.Group>
-
       </Row>
 
-      <div className='d-flex justify-content-center mt-4'>
+      <div className="d-flex justify-content-center mt-4">
         <Button variant="primary">Search</Button>
       </div>
     </Form>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;

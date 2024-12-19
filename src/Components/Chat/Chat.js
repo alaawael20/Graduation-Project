@@ -9,7 +9,6 @@ const Chat = () => {
       <section>
         <div className="container py-5">
           <div className="row">
-            {/* Sidebar */}
             <div className="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
               <h5 className="font-weight-bold mb-3 text-center text-lg-start">
                 Buyers
@@ -64,7 +63,6 @@ const Chat = () => {
                 </div>
               </div>
             </div>
-            {/* Chat Area */}
             <div className="col-md-6 col-lg-7 col-xl-8">
               <ul className="list-unstyled">
                 <li className="d-flex justify-content-between mb-4">
