@@ -1,0 +1,68 @@
+.favorites-container {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .favorites-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .favorite-card {
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .favorite-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .image-container {
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .favorite-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .favorite-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+  }
+  
+  .card-body-custom {
+    text-align: center;
+    position: relative;
+  }
+  
+  .btn-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  
+  .custom-btn {
+    background-color: #002a57;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #0a2463;
+  }
+  

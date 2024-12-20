@@ -3,7 +3,7 @@ import myprofile from "../../Images/myprofile.jpg";
 import myprofile2 from "../../Images/myprofile2.jpg";
 import Logo from "../../Images/Logo.png";
 
-const Chat = () => {
+const Chat = ({ state }) => {
   return (
     <div>
       <section>
@@ -11,7 +11,7 @@ const Chat = () => {
           <div className="row">
             <div className="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
               <h5 className="font-weight-bold mb-3 text-center text-lg-start">
-                Buyers
+                {state}
               </h5>
               <div className="card">
                 <div className="card-body">

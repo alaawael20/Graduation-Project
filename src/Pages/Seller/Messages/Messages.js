@@ -16,7 +16,7 @@ const Messages = () => {
         to3="/Seller/IncomingRequests"
         to4="/Seller/messages"
       />
-      <Chat />
+      <Chat state="Buyer" />
       <Footer />
     </div>
   );

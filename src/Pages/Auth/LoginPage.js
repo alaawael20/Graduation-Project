@@ -67,6 +67,46 @@ const LoginPage = () => {
           />
         </Col>
       </Row>
+      <Row className="text-center mt-5">
+        <Col>
+          <Link
+            to="/Seller/SellerProfile"
+            style={{
+              textDecoration: "none",
+              margin: "10px",
+              padding: "15px 30px",
+              backgroundColor: "#007BFF",
+              color: "#fff",
+              borderRadius: "5px",
+              fontSize: "18px",
+              display: "inline-block",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s, box-shadow 0.3s",
+            }}
+          >
+            Login As A Seller
+          </Link>
+        </Col>
+        <Col>
+          <Link
+            to="/buyer/buyerProfile"
+            style={{
+              textDecoration: "none",
+              margin: "10px",
+              padding: "15px 30px",
+              backgroundColor: "#28A745",
+              color: "#fff",
+              borderRadius: "5px",
+              fontSize: "18px",
+              display: "inline-block",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s, box-shadow 0.3s",
+            }}
+          >
+            Login As A Buyer
+          </Link>
+        </Col>
+      </Row>
     </Container>
   );
 };
