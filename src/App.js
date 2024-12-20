@@ -15,6 +15,10 @@ import IncomingRequests from "./Pages/Seller/IncomingRequests/IncomingRequests";
 import Messages from "./Pages/Seller/Messages/Messages";
 import SellerProfile from "./Pages/Seller/SellerProfile/SellerProfile";
 import NotFound from "./Pages/NotFound/NotFound";
+import BuyerProfile from "./Pages/Buyer/BuyerProfile/BuyerProfile";
+import BuyerMessages from "./Pages/Buyer/BuyerMessages/BuyerMessages";
+import BuyerFavorites from "./Pages/Buyer/BuyerFavorites/BuyerFavorites";
+import BuyerOrders from "./Pages/Buyer/BuyerOrders/BuyerOrders";
 
 function App() {
   return (
@@ -35,6 +39,10 @@ function App() {
         <Route path="/Seller/CarManagement" element={<CarManagement />} />
         <Route path="/Seller/IncomingRequests" element={<IncomingRequests />} />
         <Route path="/Seller/Messages" element={<Messages />} />
+        <Route path="/buyer/buyerProfile" element={<BuyerProfile />} />
+        <Route path="/buyer/messages" element={<BuyerMessages />} />
+        <Route path="/buyer/favorites" element={<BuyerFavorites />} />
+        <Route path="/buyer/orders" element={<BuyerOrders />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

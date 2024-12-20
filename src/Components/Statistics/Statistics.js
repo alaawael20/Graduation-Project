@@ -1,6 +1,16 @@
 import React from "react";
 
-export default function Statistics() {
+export default function Statistics({
+  statisticsIcon1,
+  statisticsIcon2,
+  statisticsIcon3,
+  head1,
+  head2,
+  head3,
+  num1,
+  num2,
+  num3,
+}) {
   return (
     <div>
       <div className="titlePage">Statistics</div>
@@ -9,27 +19,27 @@ export default function Statistics() {
           <div class="col-md-4">
             <div class="card text-center">
               <div class="card-body">
-                <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
-                <h5 class="card-title">Messages</h5>
-                <p class="card-text display-4">25</p>
+                {statisticsIcon1}
+                <h5 class="card-title">{head1}</h5>
+                <p class="card-text display-4">{num1}</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card text-center">
               <div class="card-body">
-                <i class="fas fa-shopping-cart fa-3x text-success mb-3"></i>
-                <h5 class="card-title">Sales</h5>
-                <p class="card-text display-4">150</p>
+                {statisticsIcon2}
+                <h5 class="card-title">{head2}</h5>
+                <p class="card-text display-4">{num2}</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card text-center">
               <div class="card-body">
-                <i class="fas fa-car fa-3x text-danger mb-3"></i>
-                <h5 class="card-title">Cars</h5>
-                <p class="card-text display-4">50</p>
+                {statisticsIcon3}
+                <h5 class="card-title">{head3}</h5>
+                <p class="card-text display-4">{num3}</p>
               </div>
             </div>
           </div>

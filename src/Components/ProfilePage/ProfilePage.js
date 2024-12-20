@@ -8,15 +8,15 @@ import {
   MDBCardBody,
   MDBCardImage,
 } from "mdb-react-ui-kit";
-import myprofile from "../../Images/myprofile.jpg";
 
 export default function ProfilePage({
   name,
-  jop,
+  state,
   email,
   phone,
   mobile,
   address,
+  profileImage,
 }) {
   return (
     <section>
@@ -26,14 +26,14 @@ export default function ProfilePage({
             <MDBCard className="mb-4">
               <MDBCardBody className="text-center">
                 <MDBCardImage
-                  src={myprofile}
+                  src={profileImage}
                   alt="avatar"
                   className="rounded-circle"
                   style={{ width: "150px", marginBottom: "10px" }}
                   fluid
                 />
                 <p className="text-muted mb-1">{name}</p>
-                <p className="text-muted mb-4">{jop}</p>
+                <p className="text-muted mb-4">{state}</p>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
